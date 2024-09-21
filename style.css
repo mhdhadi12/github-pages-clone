@@ -1,0 +1,486 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#hero-spot {
+  background: #222;
+  color: white;
+  padding: 40px 0 0 0;
+}
+
+.hero-spot h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 200;
+  line-height: 60px;
+  margin: 50px auto 0 auto;
+  max-width: 830px;
+}
+.hero-spot h2 {
+  line-height: 1.5em;
+  color: #a7a7a7;
+  font-size: 18px;
+  font-weight: 200;
+  text-align: center;
+  margin: 10px auto 60px auto;
+  max-width: 830px;
+
+  a {
+    color: white;
+  }
+}
+
+.help-link {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #bbb;
+  background-color: #333;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.help-link:hover {
+  color: #ffffff;
+}
+.logo {
+  display: block;
+  width: 169px;
+  margin: 0 auto;
+}
+
+#slideshow {
+  position: relative;
+  width: 893px;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* Atur gaya gambar */
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+/* Gambar pertama ditampilkan */
+.active {
+  display: block;
+}
+
+#tutorial {
+  padding-bottom: 20px;
+}
+#video,
+#tutorial {
+  text-align: center;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.tutorial h1 {
+  margin: 90px auto 0 auto;
+  font-size: 48px;
+  font-weight: 200;
+  line-height: 60px;
+  text-align: center;
+  max-width: 910px;
+  color: #333;
+}
+
+.tutorial h2 {
+  text-align: center;
+  font-weight: 200;
+  line-height: 38px;
+  margin: 40px auto 0;
+  font-size: 21px;
+  max-width: 740px;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 45px auto 0;
+  font-size: 0;
+}
+.tabs li {
+  display: inline-block;
+  margin: 0;
+  font-size: 15px;
+}
+.tabs .selected {
+  font-weight: bold;
+  background-color: #327fc7;
+  color: white;
+  border-color: #327fc7;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.tabs a {
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  position: relative;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.tabs li:first-child a {
+  border-radius: 7px 0 0 7px;
+}
+.tabs li:last-child a {
+  border-radius: 0 7px 7px 0;
+  transition: 0.3s;
+}
+
+.tabs li:last-child a:hover {
+  color: #327fc7;
+  border: 1px solid #327fc7;
+}
+
+.tutorial-list {
+  padding-top: 90px;
+  list-style-type: none;
+  /* counter-reset: tutorialstep; */
+}
+
+.wrapper {
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+}
+
+.tutorial-list > li {
+  position: relative;
+  background-color: #fff;
+  margin: 0 0 70px 0px;
+  padding: 40px 0 60px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 1;
+  -webkit-transition: all 0.6s ease-in-out 0s;
+  -moz-transition: all 0.6s ease-in-out 0s;
+  -o-transition: all 0.6s ease-in-out 0s;
+  transition: all 0.6s ease-in-out 0s;
+}
+
+.tutorial-list .image-right {
+  padding-right: 440px;
+}
+
+#create-repo-step {
+  background: #fff url(https://pages.github.com/images/user-repo@2x.png) right 0
+    no-repeat;
+  background-size: 446px 328px;
+}
+h4 {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1em;
+}
+p {
+  margin: 15px 0 30px;
+  font-weight: 300;
+  line-height: 1.7em;
+}
+
+.tutorial-list p {
+  margin: 30px 120px 30px;
+}
+
+a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+em {
+  font-style: italic;
+}
+
+.tutorial-list p:last-child {
+  margin-bottom: 0;
+}
+.tutorial-list .image-right p {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.tutorial-list p {
+  margin: 30px 120px 30px;
+}
+
+.details {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.tutorial-list {
+  counter-reset: tutorialstep;
+}
+
+.tutorial-list > li:not(.question):after {
+  counter-increment: tutorialstep;
+  content: counter(tutorialstep);
+}
+.tutorial-list > li:after {
+  width: 58px;
+  height: 58px;
+  line-height: 58px;
+  background-color: #327fc7;
+  border-radius: 200px;
+  font-size: 30px;
+  font-weight: 300;
+  color: #fff;
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  text-align: center;
+  z-index: 100;
+}
+
+.tutorial-list > li {
+  position: relative;
+  background-color: #fff;
+  margin: 0 0 70px 0px;
+  padding: 40px 0 60px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 1;
+  -webkit-transition: all 0.6s ease-in-out 0s;
+  -moz-transition: all 0.6s ease-in-out 0s;
+  -o-transition: all 0.6s ease-in-out 0s;
+  transition: all 0.6s ease-in-out 0s;
+}
+
+.tutorial-list .question:after {
+  content: "?";
+}
+
+.terminal {
+  width: 700px;
+  margin: 30px auto 0;
+}
+
+.header {
+  height: 25px;
+  display: block;
+  /* background: -moz-linear-gradient(top, #f7f7f7 0%, #cfcfcf 5%, #aaa 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #f7f7f7),
+    color-stop(5%, #cfcfcf),
+    color-stop(100%, #aaa)
+  ); */
+  background: -webkit-linear-gradient(top, #f7f7f7 0%, #cfcfcf 5%, #aaa 100%);
+  /* background: -o-linear-gradient(top, #f7f7f7 0%, #cfcfcf 5%, #aaa 100%);
+  background: -ms-linear-gradient(top, #f7f7f7 0%, #cfcfcf 5%, #aaa 100%);
+  background: linear-gradient(top, #f7f7f7 0%, #cfcfcf 5%, #aaa 100%); */
+  /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#aaaaaa',GradientType=0 ); */
+  border: 1px solid #9c9c9c;
+  border-bottom-color: #111;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 25px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  color: #444;
+}
+
+.shell {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-size: 17px;
+  line-height: 28px;
+  color: #eeeb82;
+  background-color: #3d3d3d;
+  overflow: hidden;
+  padding: 20px;
+  margin: 0;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  text-align: left;
+  display: block;
+}
+
+.tutorial-list .shell p {
+  margin: 0;
+  font-weight: semibold;
+}
+
+.path {
+  color: #71cfee;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-right: 0.6em;
+}
+
+.prompt {
+  color: #d74d52;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-right: 0.6em;
+}
+
+.hero-octicon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  text-align: center;
+  border: solid 1px #e5e5e5;
+  margin: 0 auto 15px;
+  display: block;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.mega-octicon {
+  font: normal normal 48px octicons;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  color: #4183c4;
+  line-height: 100px;
+}
+
+.octicon-check:before {
+  font-family: FontAwesome;
+  content: "\f00c";
+}
+
+h1 {
+  margin: 90px auto 0 auto;
+  font-size: 48px;
+  font-weight: 200;
+  line-height: 60px;
+  text-align: center;
+  max-width: 910px;
+  color: #333;
+}
+
+.next-steps {
+  margin-top: 80px;
+}
+
+.wrapper {
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+}
+
+.next-steps li:first-child,
+.next-steps li:last-child {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.next-steps li {
+  display: table-cell;
+  text-align: center;
+  padding: 0 20px 0;
+  transition: opacity 0.8s ease-in-out 0s;
+}
+
+.next-steps .hero-octicon {
+  margin-bottom: 35px;
+}
+
+.hero-octicon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  text-align: center;
+  border: solid 1px #e5e5e5;
+  margin: 0 auto 15px;
+  display: block;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.next-steps p {
+  font-weight: 400;
+}
+
+.next-steps {
+  margin-top: 80px;
+}
+
+footer {
+  position: relative;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #777;
+  clear: both;
+  width: 980px;
+  padding: 40px 0;
+  margin: 70px auto 0 auto;
+  border-top: 1px solid #eee;
+}
+
+footer .right {
+  float: right;
+  margin: 0;
+}
+.site-footer-links li:first-child {
+  margin-left: 0;
+}
+
+.site-footer-links li {
+  display: inline-block;
+  margin-left: 10px;
+}
+.octicon-mark-github:before {
+  font-family: FontAwesome;
+  content: "\f09b";
+  background-size: 50px 50px;
+}
+
+footer .octicon-mark-github {
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  color: #ccc;
+  height: 24px;
+  width: 24px;
+  margin-left: -12px;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.octicon-pencil:before {
+  font-family: FontAwesome;
+  content: "\f303";
+}
+
+.octicon-link:before {
+  font-family: FontAwesome;
+  content: "\f0c1";
+}
+
+.octicon-book:before {
+  font-family: FontAwesome;
+  content: "\f518";
+}
